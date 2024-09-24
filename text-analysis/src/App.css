@@ -1,0 +1,298 @@
+/* Dark Mode and Light Mode CSS */
+.app-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Light Mode */
+.light-mode {
+  background-color: #ffffff;
+  color: #333;
+}
+
+.light-mode h1 {
+  color: #333;
+}
+
+.light-mode .text-area {
+  background-color: #f9f9f9;
+  color: #000;
+}
+
+.light-mode .input-box,
+.light-mode .replace-btn {
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.light-mode .highlighted-text {
+  color: #000; /* Replaced Text in black for light mode */
+}
+
+/* Dark Mode */
+.dark-mode {
+  background-color: #333;
+  color: #f9f9f9;
+}
+
+.dark-mode h1 {
+  color: #fff; /* White heading for dark mode */
+}
+
+.dark-mode .text-area {
+  background-color: #555;
+  color: #f9f9f9;
+}
+
+.dark-mode .input-box,
+.dark-mode .replace-btn {
+  background-color: #555;
+  color: #f9f9f9;
+}
+
+.dark-mode .highlighted-text {
+  color: #000; /* Replaced Text content will be black in dark mode */
+}
+
+/* Toggle Switch Styles */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin-right: 10px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* UI Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  transition: color 0.3s ease; /* Smooth transition for heading color */
+}
+
+.dark-mode-toggle {
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.text-area {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  resize: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.statistics {
+  margin-bottom: 20px;
+}
+
+.statistics p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+.input-box {
+  padding: 10px;
+  margin: 10px 5px;
+  width: calc(50% - 20px);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+
+
+.highlighted-text {
+  padding: 10px;
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+mark {
+  background-color: yellow;
+}
+
+@media (max-width: 600px) {
+  .app-container {
+    padding: 10px;
+  }
+
+  .input-box {
+    width: calc(100% - 20px);
+  }
+}
+
+
+
+
+.clear-btn {
+  padding: 10px 20px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50; /* Green background */
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.clear-btn:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+
+
+.clear-btn {
+  padding: 10px 20px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  background-color: whitesmoke; /* Green background */
+  color: black;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 10px;
+}
+
+.replace-btn {
+  padding: 10px 20px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  background-color:#555; /* Green background */
+
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effects for both buttons */
+.replace-btn:hover {
+  background-color: #45a049; /* Darker shade on hover */
+}
+
+.clear-btn:hover {
+  background-color:#a14a4a /* Darker shade on hover */
+}
+
+.dark-mode-1{
+  background-color: #555; /* Dark background for dark mode */
+  
+}
+
+.error-message {
+  color: red; /* or any color that suits your theme */
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.ReactModal__Overlay {
+  background-color: rgba(0, 0, 0, 0.5); /* Dark background */
+}
+
+.ReactModal__Content {
+  padding: 20px;
+  background-color: #fff; /* Light background for modal */
+}
+
+.ReactModal__Overlay {
+  background-color: rgba(0, 0, 0, 0.5); /* Dark background */
+}
+
+.ReactModal__Content {
+  padding: 15px; /* Reduce padding */
+  background-color: #fff; /* Light background for modal */
+  border-radius: 10px; /* Rounded corners */
+  position: relative;
+  max-width: 300px; /* Set a maximum width */
+  margin: auto; /* Center the modal */
+  text-align: center; /* Center the text */
+}
+
+
+
+/* App.css */
+
+/* Common button styles */
+.button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s; /* Add transition for smooth effect */
+}
+
+/* Specific styles for Replace All button */
+.replace-btn {
+  background-color: #007bff; /* Blue background */
+  color: white;
+}
+
+/* Specific styles for Clear button */
+.clear-btn {
+  background-color: whitesmoke; /* Same blue background */
+  color: black;
+}
+
